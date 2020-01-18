@@ -14,37 +14,142 @@ and then clone it to your development environment.
 
 ### Navigating the Filesystem
 
-* Get an idea of where you are in the operating system. Use the `pwd` command to find your "path to working directory"--your current location in the filesystem of your devbox. *Paste the output of the `pwd` command here:*
-* Discover more about this filesystem. Use `ls` (the "list" command)to see what is in this directory. *What directories and files do you see when you run `ls`?*
+* Get an idea of where you are in the operating system. Use the `pwd` command to find your "path to working directory"--your current location in the filesystem of your devbox. *Paste the output of the `pwd` command here:* 
+
+/c/Users/eilis/temp/projects
+
+* Discover more about this filesystem. Use `ls` (the "list" command)to see what is in this directory. *What directories and files do you see when you run `ls`?* 
+
+eilisglee.github.io/            wats3010-product-page/  wats3010-skills-2/
+wats1030-intro-to-unix/         wats3010-project-1/     wats-3020-hello-cowsay/
+wats3010-hello-world/           wats3010-project-2/
+wats3010-intro-to-bootstrap-4/  wats3010-skills-1/
+ 
 * You can use *options* to modify how a command runs. Try using `ls -alh` to see the contents of your current directory. *How are the results different when you use the `-alh` options?*
+
+The 'ls -alh' command includes more details, such as dates.
+total 48K
+drwxr-xr-x 1 eilis 197609 0 Jan 15 19:26 ./
+drwxr-xr-x 1 eilis 197609 0 Oct  2 21:19 ../
+drwxr-xr-x 1 eilis 197609 0 Jan 12 11:21 eilisglee.github.io/
+drwxr-xr-x 1 eilis 197609 0 Jan 15 19:26 wats1030-intro-to-unix/
+drwxr-xr-x 1 eilis 197609 0 Oct  2 21:40 wats3010-hello-world/
+drwxr-xr-x 1 eilis 197609 0 Nov 16 14:11 wats3010-intro-to-bootstrap-4/
+drwxr-xr-x 1 eilis 197609 0 Nov 28 12:38 wats3010-product-page/
+drwxr-xr-x 1 eilis 197609 0 Oct 19 12:15 wats3010-project-1/
+drwxr-xr-x 1 eilis 197609 0 Oct 28 21:09 wats3010-project-2/
+drwxr-xr-x 1 eilis 197609 0 Oct 10 20:38 wats3010-skills-1/
+drwxr-xr-x 1 eilis 197609 0 Oct 21 18:43 wats3010-skills-2/
+drwxr-xr-x 1 eilis 197609 0 Jan 10 20:38 wats-3020-hello-cowsay/
+
 * The `man` ("manual") command tells you more about how any given command works. (*WARNING:* CodeAnywhere does not support the man command. You can click the following link to complete this task: http://man.he.net/). Run `man` to see instructions about how to use `man`. Then use `man` to learn what the `a`, `l`, and `h` options mean when used with the `ls` command. *Write down what those options do?*
+
+-a, --all: forces man to display all the manual pages with names that match the criteria.
+
+-l, --locale-file: interpret PAGE argument as local filename
+
+-H, --html[=BROWSWER]: use www-browser or BROWSER to display HTML output
+
 * Commands can also take *arguments*, which are usually the names of files or locations that you want the command to work with. Try running `ls /` to see what files are in the *root* directory of the filesystem. *What files and directories do you see listed?*
+
+bin/  etc/           LICENSE.txt  ReleaseNotes.html  unins000.exe*
+cmd/  git-bash.exe*  mingw64/     tmp/               unins000.msg
+dev/  git-cmd.exe*   proc/        unins000.dat       usr/
+
+
 * A Unix filesystem has a few special shortcuts to refer to specific locations. `/` indicates the *root* of the filesystem, meaning the top-most directory in the filesystem hierarchy. Use the `cd` ("change directory") command to move to the root directory. (Hint: Use `man` to look up the `cd` command if you have any issues) *Then run `pwd` and paste the output here:*
+
+ /
+
 * Another special shortcut in Unix is the `~` location. This indicates the *user root* directory, meaning the top-most directory in the hierarchy that comes below your user account. Use `cd` to move to `~`. *Run `pwd` and paste the response here:*
+
+/c/Users/eilis
+
 * Change directory into the `challenge_files` directory. Use `ls` to find only the files with a `.demo` pattern. *How many files do you find?*
+
+3 .demo files found
+2015_special_stuff.demo  cloaked-wookie.demo  scooter-double-mamba.demo
+
 * Use the `cd` command to move "up" one directory. *Where are you in the filesystem now?*
+
+/c/Users/eilis/temp/projects/wats1030-intro-to-unix
+
 * Press the up arrow on your keyboard. *What just happened?*
+
+The 'cd -' command appeared
+
 * Press the up arrow a few more times. *What do you see?*
+
+The history of commands appear to be stored.
+
 * Run the `history` command. *What do you see?*
+
+A list of all the commands I ever entered.
 
 ### Observing the System
 
 * Discover what account you are logged into using the `whoami` command. *What username are you currently using?*
+
+eilis
+
 * Discover who else is on your system with the `who` command. *Are any other users using your system? If so, list them here:*
+
+No other users are using my system so nothing was listed.
+
 * How long has your system been running? Use `uptime` to see, and *paste the result here:*
+
+bash: uptime: command not found
+
 * Run `ps aux` and review the results. (Hint: Use `man` to learn more about the `ps` command and options.) *How do you interpret what you see here?*
+
+I'm not entirely sure how to interpret this but it appears to be a snapshot of the current processes.
+ PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1890    1889    1890      18520  pty0      197609 19:24:59 /usr/bin/bash
+     2071    1890    2071      15456  pty0      197609 20:19:35 /usr/bin/ps
+     1889       1    1889       9072  ?         197609 19:24:56 /usr/bin/mintty
+
 * Run `top` and review the results. (Hint: You may need to use `ctrl-c` to get out of this app.) *How do you interpret what you see here?*
+
+bash: top: command not found
 
 ### Finding and Viewing Files
 
 * Make sure you are in the `challenge_files` directory. Use the `*` wildcard to find all the files that have the word "credit" in the filename. *How many files did you find?*
+
+Two files found:
+credit_cards.txt  credit_cards2.txt
+
 * Use the `more` command to view one of the `credit_cards` files you just discovered. (Hint: Type `q` to quit viewing the file. Press the `spacebar` to page down. Use your keyboard arrows to move up/down.) *What is the date in the file you have viewed?*
+
+Last updated 01-15-2015
+
 * Use the `find` command to search for files more effectively. Search the sub-directories under `challenge_files` to find the location of the file named `modi_laboriosam.txt`. *Where is that file located?*
+
+./tmp/modi_laboriosam.txt
+
 * Use the `grep` command to search for text within a file. Use `grep` on all the `.user` files in `challenge_files` to find which files contain "WA" (the abbreviation for Washington state). *How many files did you find?*
+
+Two files found
+./Britt-Erdman.user:O'Harachester, WA 37261
+./Lissie-Strosin.user:Jewessfurt, WA 00816-7241
+
 * Use the `-r` option of `grep` to *recursively* find the text "Waldo" hidden in a file somewhere under the `challenge_files` directory. *Paste the result showing the file and line where the word "Waldo" shows up.*
+
+./serial-numbers/eaque_molestiae.txt:4
 
 ### Pipes and Connecting Commands
 
 * Sometimes it's useful to output the results of a command to a text file for further analysis, reference, or processing. Try running `ls > files.txt`. Notice that the file `files.txt` was created. View that file using `more`. *What do you see in the `files.txt` file?*
+
+A list of all the file names
+
 * Notice that if you run `ls -alh` in the `challenge_files` directory, the files scroll by very quickly. Sometimes it would be better to get the results in a paginated format. Try running `ls -alh | more`. *Describe what you see when you run `ls -alh | more`.*
+
+'ls - alh | more' doen't appear to work for me. I ran "ls -alh | less' though and it seems to show a list of all the files in the 'challenge_files' directory, along with my username, the date and time the file was created, and the file names.
+
 * Earlier, when you viewed the list of active processes on your devbox using `ps aux`, the list was probably really long. You can make this list more manageable by using the pipe (`|`) to filter the results of `ps` using `grep`. Run `ps aux | grep <your_username>` to see what processes are running for your specific user. *Paste the list of processes that reference your username here:*
+
+ ps aux | grep 197609
+      218       1     218      17136  ?         197609 13:57:21 /usr/bin/mintty
+      219     218     219       7212  pty0      197609 13:57:22 /usr/bin/bash
+      365     219     365      14548  pty0      197609 14:23:34 /usr/bin/ps
